@@ -3,6 +3,11 @@ for name in names:
     print(name)
 print(list(range(5)))
 
+# for循环其实可以同时使用两个甚至多个变量，比如dict的items()可以同时迭代key和value：
+d = {'x': 'A', 'y': 'B', 'z': 'C' }
+for k, v in d.items():
+    print(k, '=', v)
+
 n = 1
 while n <= 100:
     if n > 10: # 当n = 11时，条件满足，执行break语句
