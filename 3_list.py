@@ -28,7 +28,12 @@ t = (1,)
 # 这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。
 # 所以，只有1个元素的tuple定义时必须加一个逗号,，来消除歧义：
 
+
+
+
+
 ## Dict字典
+# 字典与JSON文件的区别是：Json是字符串
 d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 print(d['Michael'])
 d.pop('Tracy')
@@ -37,6 +42,39 @@ d['Tryton']=10
 # if d.get('Bob'):
 if 'Tryton' in d:
     print(d['Tryton'])
+# 字典里面嵌套字典，如果需要获取指定的内容，需要一层一层往下取
+songs={"Fayzz":[{"Fayzz": "NB!"}]}
+print(songs['Fayzz'][0]['Fayzz'])
+# 不确定字典内是否有这个值的时候，会返回设定的默认值
+print(d.get('Fayzz','默认值'))
+# 获取所有的键
+print(d.keys())
+# 获取所有的值
+print(d.values())
+# 获取所有的健值对
+print (d.items())
+print('-----------')
+for key in d.keys():
+    print(key, d[key])
+# 遍历所有的值，不能通过值获取到键
+for value in d.values():
+    print(value)
+dict1 = {
+    "name":"小明",
+    "age" : 18,
+    "gender": True,
+    "height": 1.75,
+}
+dict2 = {
+"name": "小明",
+"height": 1.88,
+'hobby': ['吃']
+}
+# 把一个字典的内容更新到另外一个字典
+dict1.update(dict2)
+print(dict1)
+
+
 
 
 ## Set集合
