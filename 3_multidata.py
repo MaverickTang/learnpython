@@ -37,18 +37,8 @@ d['Tryton']=10
 # if d.get('Bob'):
 if 'Tryton' in d:
     print(d['Tryton'])
-
-
-## Set集合
 # set自动过滤重复元素
 s = set([ 2, 2,1, 1, 3, 3])
 print(s)
-# 集合计算
-set3=set([1,2,3,4])
-set4=set([2,3,4,5])
-#交集 and &
-print(set3 & set4)
-#并集 or |
-print(set3 | set4)
-# 亦或集 ^
-print(set3 ^ set4)
+
+## Set集合
