@@ -21,6 +21,13 @@ def test():
     else:
         print('Too many arguments!')
 
+def test_error():
+    args=sys.argv
+    if len(args)==2:
+        print('I wanna die, alone')
+    elif len(args)==3:
+        print('over')
+
 #类似__xxx__这样的变量是特殊变量，可以被直接引用，但是有特殊用途，
 # 比如__author__，__name__就是特殊变量，hello模块定义的文档注释也可以用特殊变量__doc__访问
 # 我们自己的变量一般不要用这种变量名
